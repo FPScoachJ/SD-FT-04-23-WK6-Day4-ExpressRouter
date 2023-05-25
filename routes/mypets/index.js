@@ -15,8 +15,9 @@ router.post("/post_pets", async (req, res) => {
 router.put("/put_pets", (req, res) => {
   res.send("/get_pets");
 });
-router.delete("/delete_pets", (req, res) => {
-  res.send("/get_pets");
+router.delete("/delete_pets/:id", (req, res) => {
+  const { id } = req.params;
+  res.send("/delete_pets");
 });
 
 module.exports = router;

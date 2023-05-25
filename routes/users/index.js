@@ -15,8 +15,9 @@ router.post("/post_users", async (req, res) => {
 router.put("/put_users", (req, res) => {
   res.send("/get_users");
 });
-router.delete("/delete_users", (req, res) => {
-  res.send("/get_users");
+router.delete("/delete_users/:id", (req, res) => {
+  const { id } = req.params;
+  res.send("/delete_users");
 });
 
 module.exports = router;
